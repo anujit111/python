@@ -1,0 +1,14 @@
+def replace_duplicate_occurrence(string):
+    seen = set()
+    result = []
+    for char in string:
+        if char not in seen:
+            result.append(char)
+            seen.add(char)
+        else:
+            result.append('$')  # Replace duplicate occurrence with '$'
+    return ''.join(result)
+
+# Test the function
+string = "hello"
+print("After replacement:", replace_duplicate_occurrence(string))
